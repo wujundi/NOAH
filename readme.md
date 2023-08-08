@@ -10,7 +10,7 @@
 ### 备份
 
 * docker pull registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:20230803-bak
-* docker run -itd --name='ambari' --hostname='ambari-server' --privileged registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:20230803-bak
+* docker run -itd --name='ambari' --hostname='ambari-server' registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:20230803-bak
 
 ### RAW
 
