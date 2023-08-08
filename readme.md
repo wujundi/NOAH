@@ -22,6 +22,11 @@
 * docker pull registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:ambari-installed
 * docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8088 -p 19888:19888 -p 3000:3000 -p 10002:10002 -p 16010:16010 -p 18081:18081 -p 9995:9995 -p 8082:8082 -p 8983:8983 -p 8440:8440 -p 8441:8441 -p 9092:9092 -p 4040:4040 -p 4041:4041 -p 9000:9000 -p 10086:10086 -p 5432:5432 -p 8081:8081 -p 18030:18030 -p 19020:19020 -p 19030:19030 -p 19010:19010 -p 19050:19050 -p 19060:19060 -p 18040:18040 -p 18060:18060 -p 18088:18088 --hostname='noah' --privileged registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:ambari-installed
 
+## Streampark
+
+* docker pull registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:install-streampark-dev
+* docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8088 -p 19888:19888 -p 3000:3000 -p 10002:10002 -p 16010:16010 -p 18081:18081 -p 9995:9995 -p 8082:8082 -p 8983:8983 -p 8440:8440 -p 8441:8441 -p 9092:9092 -p 4040:4040 -p 4041:4041 -p 9000:9000 -p 10086:10086 -p 5432:5432 -p 8081:8081 -p 18030:18030 -p 19020:19020 -p 19030:19030 -p 19010:19010 -p 19050:19050 -p 19060:19060 -p 18040:18040 -p 18060:18060 -p 18088:18088 --hostname='noah' --privileged registry.cn-hangzhou.aliyuncs.com/wujundi/centos-noah:install-streampark-dev
+
 ## RANDOM API
 
 * https://randomuser.me/api/
