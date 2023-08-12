@@ -35,4 +35,3 @@
 ## RANDOM API
 
 * https://randomuser.me/api/
-*
