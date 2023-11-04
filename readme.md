@@ -1,30 +1,35 @@
 # PROJECT NOAH
 
+
 项目名称灵感来自于诺亚方舟.
 
 本项目旨在为数据开发人员提供一个简单的，紧跟技术发展趋势的一站式学习与测试环境。
 
 如果有之前使用过 CDH-quickstart-VM 的朋友，那么，对，就是类似的玩意。
 
+文档目录如下：
+
+[toc]
+
 ## 一、您能从项目中获得什么环境？
 
 ### 1、ambari 2.8.0 的全部组件（对应 bigtop 3.2.0 的组件栈），包含：
 
-| Service        | Version  | Description                                                                                                                                                                   |
-| -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HDFS           | 3.3.4-1  | Apache Hadoop Distributed File System                                                                                                                                         |
-| YARN           | 3.3.4-1  | Apache Hadoop NextGen MapReduce (YARN)                                                                                                                                        |
-| MapReduce2     | 3.3.4-1  | Apache Hadoop NextGen MapReduce (YARN)                                                                                                                                        |
-| Tez            | 0.10.1-1 | Tez is the next generation Hadoop Query Processing framework written on top of YARN.                                                                                          |
-| Hive           | 3.1.3-1  | Data warehouse system for ad-hoc queries & analysis of large datasets and table & storage management service                                                                  |
-| HBase          | 2.4.13-1 | Non-relational distributed database and centralized service for configuration management & synchronization                                                                    |
-| ZooKeeper      | 3.5.9-2  | Centralized service which provides highly reliable distributed coordination                                                                                                   |
-| Ambari Metrics | 3.0.0    | A system for metrics collection that provides storage and retrieval capability for metrics collected from the cluster                                                         |
-| Kafka          | 2.8.1-2  | A high-throughput distributed messaging system                                                                                                                                |
-| Spark          | 3.2.3-1  | Apache Spark is a unified analytics engine for large-scale data processing.                                                                                                   |
-| Zeppelin       | 0.10.1-1 | A web-based notebook that enables interactive data analytics. It enables you to make beautiful data-driven, interactive and collaborative documents with SQL, Scala and more. |
-| Flink          | 1.15.3-1 | Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams<br />NOAH 的flink 环境中已经包含了 paimon 0.5.0      |
-| Solr           | 8.11.2-1 | Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene.                                                                             |
+| Service        | Version  | Description                                                                                                                                                                                 |
+| -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HDFS           | 3.3.4-1  | Apache Hadoop Distributed File System                                                                                                                                                       |
+| YARN           | 3.3.4-1  | Apache Hadoop NextGen MapReduce (YARN)                                                                                                                                                      |
+| MapReduce2     | 3.3.4-1  | Apache Hadoop NextGen MapReduce (YARN)                                                                                                                                                      |
+| Tez            | 0.10.1-1 | Tez is the next generation Hadoop Query Processing framework written on top of YARN.                                                                                                        |
+| Hive           | 3.1.3-1  | Data warehouse system for ad-hoc queries & analysis of large datasets and table & storage management service                                                                                |
+| HBase          | 2.4.13-1 | Non-relational distributed database and centralized service for configuration management & synchronization                                                                                  |
+| ZooKeeper      | 3.5.9-2  | Centralized service which provides highly reliable distributed coordination                                                                                                                 |
+| Ambari Metrics | 3.0.0    | A system for metrics collection that provides storage and retrieval capability for metrics collected from the cluster                                                                       |
+| Kafka          | 2.8.1-2  | A high-throughput distributed messaging system                                                                                                                                              |
+| Spark          | 3.2.3-1  | Apache Spark is a unified analytics engine for large-scale data processing.                                                                                                                 |
+| Zeppelin       | 0.10.1-1 | A web-based notebook that enables interactive data analytics. It enables you to make beautiful data-driven, interactive and collaborative documents with SQL, Scala and more.               |
+| Flink          | 1.15.3-1 | Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams<br />NOAH 的flink 环境中已经包含了 paimon 0.5.0 和 flink CDC 2.4.0 |
+| Solr           | 8.11.2-1 | Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene.                                                                                           |
 
 ### 2、流任务管理平台 streampark 2.1.1
 
@@ -66,7 +71,6 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 
 浏览器访问 http://127.0.0.1:8080/#/login，Username 输入 admin，Password 输入 admin，登录之后，在左侧 Service 后面的三个点中，点击【Start All】，等待组件各组件启动
 
-
 ## 附1：各组件访问 url 及用户名密码
 
 | 组件       | 访问地址                                           | 用户名 | 密码                             |
@@ -81,6 +85,8 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 
 ## 附2：上述组件的官网
 
+感谢所有的这些开源大数据组件以及他们的参与者
+
 [Ambari - (apache.org)](https://ambari.apache.org/)
 
 [Bigtop – Apache Bigtop](https://bigtop.apache.org/)
@@ -93,13 +99,13 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 
 [Apache Paimon](https://paimon.apache.org/)
 
+[CDC Connectors for Apache Flink® (ververica.github.io)](https://ververica.github.io/flink-cdc-connectors/)
 
 ## 后续规划
 
 1、Stream WareHouse 流式数仓的构建、资源占用与性能、可行性调研。
 
 2、离线调度平台  dolphinscheduler（离线调度平台大家应该见的多了，所以这个不是 NOAH 的主要方向）
-
 
 ## 后记
 
