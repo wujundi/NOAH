@@ -4,9 +4,9 @@
 
 如果有之前使用过 CDH-quickstart-VM 的朋友，对，就是类似的玩意。
 
-## 一、能从项目中获得什么环境？
+## 一、您能从项目中获得什么环境？
 
-### 1、ambari 2.8.0 的全部组件，包含（对应 bigtop 3.2.0 的组件栈）：
+### 1、ambari 2.8.0 的全部组件（对应 bigtop 3.2.0 的组件栈），包含：
 
 | Service        | Version  | Description                                                                                                                                                                   |
 | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,7 +21,7 @@
 | Kafka          | 2.8.1-2  | A high-throughput distributed messaging system                                                                                                                                |
 | Spark          | 3.2.3-1  | Apache Spark is a unified analytics engine for large-scale data processing.                                                                                                   |
 | Zeppelin       | 0.10.1-1 | A web-based notebook that enables interactive data analytics. It enables you to make beautiful data-driven, interactive and collaborative documents with SQL, Scala and more. |
-| Flink          | 1.15.3-1 | Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams                                                      |
+| Flink          | 1.15.3-1 | Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams<br />NOAH 的flink 环境中已经包含了 paimon 0.5.0      |
 | Solr           | 8.11.2-1 | Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene.                                                                             |
 
 ### 2、流任务管理平台 streampark 2.1.1
@@ -75,6 +75,7 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 | SpiderFlow | http://127.0.0.1:18088/                            |        | 不需要登录                       |
 | EFAK       | http://127.0.0.1:18048/                            | admin  | 123456                           |
 
+环境中使用的个人代码都在 /OPT 目录中，欢迎查看，欢迎指正。
 
 ## 附2：上述组件的官网
 
@@ -88,7 +89,24 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 
 [EFAK (kafka-eagle.org)](https://www.kafka-eagle.org/)
 
+[Apache Paimon](https://paimon.apache.org/)
 
-### 后续规划
 
-1、离线调度平台  dolphinscheduler（离线调度平台大家应该见的多了，所以这个不是 NOAH 的主要方向）
+## 后续规划
+
+1、Stream WareHouse 流式数仓的构建、资源占用与性能、可行性调研。
+
+2、离线调度平台  dolphinscheduler（离线调度平台大家应该见的多了，所以这个不是 NOAH 的主要方向）
+
+
+## 后记
+
+作为一位数仓同学，深知这个岗位对基础设施的依赖。
+
+恰逢数据湖正在蓬勃发展，流式数仓有望颠覆传统数据处理模式，倍感焦虑，于是使出了吃奶的劲攒出了这么一套环境。
+
+然而个人水平有限，难免坐井观天，还望大家多多指点，多多提携，感谢感谢。
+
+工作繁忙加之广告盛行，烦请您备注来自NOAH项目，不胜感激。
+
+![1699105102086](image/readme/1699105102086.png)
