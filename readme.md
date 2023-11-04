@@ -76,6 +76,8 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 
 浏览器访问 http://127.0.0.1:8080/#/login，Username 输入 admin，Password 输入 admin，登录之后，在左侧 Service 后面的三个点中，点击【Start All】，等待组件各组件启动
 
+![1699107475328](image/readme/1699107475328.png)
+
 ### Step 6 启动完成，欢迎玩耍
 
 ## 四、后续规划
