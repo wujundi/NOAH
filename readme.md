@@ -2,6 +2,8 @@
 
 项目名称灵感来自于诺亚方舟，该项目旨在未数据开发人员提供一个简单的，紧跟技术发展趋势的一站式学习与测试环境
 
+如果有之前使用过 CDH-quickstart-VM 的朋友，对，就是类似的玩意。
+
 ## 一、能从项目中获得什么环境？
 
 ### 1、ambari 2.8.0 的全部组件，包含（对应 bigtop 3.2.0 的组件栈）：
@@ -34,6 +36,8 @@
 
 ### 5、Kafka 管理平台 EFAK 3.0.1
 
+![1699103374003](image/readme/1699103374003.png)
+
 ## 二、需要什么前置条件？
 
 你需要一个 docker 环境（建议给到充裕一些的内存容量，本人测试容器内存为48G）
@@ -50,7 +54,7 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 
 ### Step 3 进入容器
 
-具体方式因人而异，这里推荐使用 vscode 的 Dev Containers 插件
+具体方式因人而异，个人推荐使用 vscode 的 Dev Containers 插件，能兼顾图形化文件目录和终端指令，可以提高学习效率。
 
 ### Step 4 开启后端服务
 
@@ -61,4 +65,30 @@ docker run -itd --name='noah' -p 8000:8000 -p 8080:8080 -p 50070:50070 -p 8088:8
 浏览器访问 http://127.0.0.1:8080/#/login，Username 输入 admin，Password 输入 admin，登录之后，在左侧 Service 后面的三个点中，点击【Start All】，等待组件各组件启动
 
 
-## 附：各组件访问 url 及用户名密码
+## 附1：各组件访问 url 及用户名密码
+
+| 组件       | 访问地址                                           | 用户名 | 密码                             |
+| ---------- | -------------------------------------------------- | ------ | -------------------------------- |
+| Ambari     | http://127.0.0.1:8080/#/login                      | admin  | admin                            |
+| StreamPark | http://127.0.0.1:10086/#/login?redirect=/flink/app | admin  | streampark                       |
+| Doris      | http://127.0.0.1:18030/home                        | root   | 没有密码，输入用户名之后登录即可 |
+| SpiderFlow | http://127.0.0.1:18088/                            |        | 不需要登录                       |
+| EFAK       | http://127.0.0.1:18048/                            | admin  | 123456                           |
+
+
+## 附2：上述组件的官网
+
+[Ambari - (apache.org)](https://ambari.apache.org/)
+
+[Bigtop – Apache Bigtop](https://bigtop.apache.org/)
+
+[Apache StreamPark (incubating) | Apache StreamPark (incubating)](https://streampark.apache.org/zh-CN/)
+
+[Apache Doris: Open-Source Real-Time Data Warehouse - Apache Doris](https://doris.apache.org/zh-CN/)
+
+[EFAK (kafka-eagle.org)](https://www.kafka-eagle.org/)
+
+
+### 后续规划
+
+1、离线调度平台  dolphinscheduler（离线调度平台大家应该见的多了，所以这个不是 NOAH 的主要方向）
